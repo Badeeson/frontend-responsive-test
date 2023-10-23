@@ -1,10 +1,18 @@
 .carousel-container {
-  padding: 12px !important;
+  padding: 12px 12px 24px !important;
   background-color: #F5F4F9;
 }
 
+.carousel-content-football-active {
+  background-color: #5E3DB3 !important;
+}
+
+.carousel-content-basketball-active {
+  background-color: #090C35 !important;
+}
+
 .carousel-dots-circle {
-  bottom: 6px !important;
+  bottom: 18px !important;
 }
 
 .carousel-dots-circle > li button {
@@ -19,4 +27,8 @@
   height: 10px !important;
   border-radius: 50% !important;
   background: #5C3CAF !important;
+}
+
+.carousel-dots-circle-active > li.slick-active button {
+  background: #FFFFFF !important;
 }

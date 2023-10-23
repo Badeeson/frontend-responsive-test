@@ -2,22 +2,50 @@ import React from 'react';
 import Image from 'next/image';
 import { Col, Row, theme } from 'antd';
 import { Typography } from 'antd';
-import { Carousel } from 'antd';
 import './index.css';
+import CarouselCustom from './Carousel';
 
-const { Title, Paragraph, Text } = Typography;
+const { Title } = Typography;
 
-const contentStyle: React.CSSProperties = {
-  margin: 0,
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+const footballerData = [
+  {
+    sequence: '01',
+    label: 'CONNECTION',
+    content: 'Connect with coaches directly, you can ping coaches to view profile.',
+  },
+  {
+    sequence: '02',
+    label: 'COLLABORATION',
+    content: 'Work with other student athletes to  increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.',
+  },
+  {
+    sequence: '03',
+    label: 'GROWTH',
+    content: 'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc.',
+  }
+]
+
+const basketballerData = [
+  {
+    sequence: '01',
+    label: 'CONNECTION',
+    content: 'Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.'
+  },
+  {
+    sequence: '02',
+    label: 'COLLABORATION',
+    content: 'Work with recruiter to increase your chances of finding talented athlete.',
+  },
+  {
+    sequence: '03',
+    label: 'GROWTH',
+    content: 'Save your time, recruit proper athlets for your team.',
+  }
+];
 
 const AthletsComponent: React.FC = () => {
   const { token: { colorBgContainer } } = theme.useToken();
+
   return (
     <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
       <Row gutter={[16, 16]}>
@@ -45,77 +73,24 @@ const AthletsComponent: React.FC = () => {
           />
         </Col>
         <Col span={24}>
-          <Carousel className="carousel-container" dots={{ className: 'carousel-dots-circle' }}>
-            <Typography>
-              <Title
-                level={2}
-                style={{ display: 'flex', alignItems: 'center', color: '#C2C2C2', fontWeight: 400 }}
-              >
-                <span
-                  style={{ 
-                    color: '#000000',
-                    fontSize: '0.5em',
-                    textDecoration: 'underline',
-                    textDecorationThickness: 4,
-                    textDecorationColor: '#603EBE',
-                    marginRight: 12
-                  }}
-                >
-                  {`01`}
-                </span>
-                {`COLLABORATION`}
-              </Title>
-              <Paragraph>
-                Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.
-              </Paragraph>
-            </Typography>
-            <Typography>
-              <Title
-                level={2}
-                style={{ display: 'flex', alignItems: 'center', color: '#C2C2C2', fontWeight: 400 }}
-              >
-                <span
-                  style={{ 
-                    color: '#000000',
-                    fontSize: '0.5em',
-                    textDecoration: 'underline',
-                    textDecorationThickness: 4,
-                    textDecorationColor: '#603EBE',
-                    marginRight: 12
-                  }}
-                >
-                  {`03`}
-                </span>
-                {`COLLABORATION`}
-              </Title>
-              <Paragraph>
-                Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.
-              </Paragraph>
-            </Typography>
-            <Typography>
-              <Title
-                level={2}
-                style={{ display: 'flex', alignItems: 'center', color: '#C2C2C2', fontWeight: 400 }}
-              >
-                <span
-                  style={{ 
-                    color: '#000000',
-                    fontSize: '0.5em',
-                    textDecoration: 'underline',
-                    textDecorationThickness: 4,
-                    textDecorationColor: '#603EBE',
-                    marginRight: 12
-                  }}
-                >
-                  {`03`}
-                </span>
-                {`COLLABORATION`}
-              </Title>
-              <Paragraph>
-                Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.
-              </Paragraph>
-            </Typography>
-          </Carousel>
+          <CarouselCustom data={footballerData} type="football" />
+        </Col>
+      </Row>
+      <Row
+        align="middle"
+        justify="center"
+        gutter={[16, 16]}
+      >
+        <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
+          <Image
+            src="/basketballer.png"
+            alt="Basketballer"
+            width={200}
+            height={281}
+          />
+        </Col>
+        <Col span={24}>
+          <CarouselCustom data={basketballerData} type="basketball" />
         </Col>
       </Row>
     </div>
