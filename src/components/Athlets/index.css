@@ -1,0 +1,22 @@
+.carousel-container {
+  padding: 12px !important;
+  background-color: #F5F4F9;
+}
+
+.carousel-dots-circle {
+  bottom: 6px !important;
+}
+
+.carousel-dots-circle > li button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: #D8D8D8 !important;
+}
+
+.carousel-dots-circle > li.slick-active button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: #5C3CAF !important;
+}
