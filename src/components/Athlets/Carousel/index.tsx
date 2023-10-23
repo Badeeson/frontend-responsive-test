@@ -64,7 +64,7 @@ const CarouselCustom = (props: CarouselCustomProps) => {
     <Carousel
       className={`carousel-container ${contentActive ? (type === 'football' ? 'carousel-content-football-active' : 'carousel-content-basketball-active') : ''}`}
       afterChange={onChange}
-      dots={{ className: `carousel-dots-circle ${contentActive ? 'carousel--active' : ''}` }}
+      dots={{ className: `carousel-dots-circle ${contentActive ? 'carousel-dots-circle-active' : ''}` }}
     >
       {data.map((item) => {
         return (

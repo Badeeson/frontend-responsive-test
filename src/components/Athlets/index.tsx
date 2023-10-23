@@ -65,10 +65,11 @@ const AthletsComponent: React.FC = () => {
       >
         <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
           <Image
-            src="/footballer.png"
+            src="/graphic-mobile-footballer.png"
             alt="Footballer"
+            priority
             // className={styles.vercelLogo}
-            width={200}
+            width={218}
             height={281}
           />
         </Col>
@@ -83,10 +84,11 @@ const AthletsComponent: React.FC = () => {
       >
         <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
           <Image
-            src="/basketballer.png"
+            src="/graphic-mobile-basketballer.png"
             alt="Basketballer"
-            width={200}
-            height={281}
+            priority
+            width={302}
+            height={250}
           />
         </Col>
         <Col span={24}>
