@@ -1,14 +1,8 @@
 import React from 'react';
 import { Typography } from 'antd';
+import { ContentSectionProps } from '@/common/interfaces';
 
 const { Title, Paragraph } = Typography;
-
-export interface ContentSectionProps {
-  sequence: string;
-  label: string;
-  content: string;
-  type?: string;
-}
 
 const ContentSection = (props: ContentSectionProps) => {
   const { sequence, label, content, type } = props;

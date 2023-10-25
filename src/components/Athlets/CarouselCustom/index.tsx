@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'antd';
-import ContentSection, { ContentSectionProps } from '../ContentSection';
-
-interface CarouselCustomProps {
-  data: Array<ContentSectionProps>;
-  type: string;
-}
+import { CarouselCustomProps } from '@/common/interfaces';
+import ContentSection from '../ContentSection';
 
 const CarouselCustom = (props: CarouselCustomProps) => {
   const { data, type } = props;

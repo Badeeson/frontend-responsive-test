@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { theme } from 'antd';
-import CarouselCustom from './Carousel';
+import CarouselCustom from './CarouselCustom';
 import RenderContent from './RenderContent';
 import { basketballerData, footballerData } from './data';
 import './index.css';

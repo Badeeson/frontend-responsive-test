@@ -1,13 +1,8 @@
 import React from 'react';
 import { Row, Col, Typography } from 'antd';
+import { RenderContentProps } from '@/common/interfaces';
 
 const { Title } = Typography;
-
-interface RenderContentProps {
-  title: string;
-  img: React.JSX.Element;
-  carousel: React.JSX.Element;
-}
   
 const RenderContent = (props: RenderContentProps) => {
   const { title, img, carousel } = props;

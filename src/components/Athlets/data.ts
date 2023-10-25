@@ -1,4 +1,6 @@
-export const footballerData = [
+import { ContentSectionProps } from "@/common/interfaces";
+
+export const footballerData: ContentSectionProps[] = [
   {
     sequence: '01',
     label: 'CONNECTION',
@@ -16,7 +18,7 @@ export const footballerData = [
   }
 ];
 
-export const basketballerData = [
+export const basketballerData: ContentSectionProps[] = [
   {
     sequence: '01',
     label: 'CONNECTION',
