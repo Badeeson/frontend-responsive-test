@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Carousel } from 'antd';
 import { CarouselCustomProps } from '@/common/interfaces';
-import ContentSection from '../ContentSection';
 
 const CarouselCustom = (props: CarouselCustomProps) => {
-  const { data, type } = props;
+  const { type, children } = props;
   const [contentActive, setContentActive] = useState(false);
 
   const onChange = (currentSlide: number) => {
@@ -14,19 +13,11 @@ const CarouselCustom = (props: CarouselCustomProps) => {
 
   return (
     <Carousel
-      className={`carousel-container ${contentActive ? (type === 'football' ? 'carousel-content-football-active' : 'carousel-content-basketball-active') : ''}`}
+      className={`carousel-container ${contentActive ? (type === 'football' ? 'carousel-content-football-footer' : 'carousel-content-basketball-footer') : ''}`}
       afterChange={onChange}
       dots={{ className: `carousel-dots-circle ${contentActive ? 'carousel-dots-circle-active' : ''}` }}
     >
-      {data.map((item) => {
-        return (
-          <ContentSection
-            {...item}
-            type={type}
-            key={type + item.sequence}
-          />
-        );
-      })}
+      {children}
     </Carousel>
   );
 }

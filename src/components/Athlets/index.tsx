@@ -2,20 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import { theme } from 'antd';
 import { ContentSectionProps } from '@/common/interfaces';
+import { FOOTBALL, BASKETBALL } from '@/common/constants';
 import GridArrange from './GridArrange';
 import ContentSection from './ContentSection';
 import { footballerData, basketballerData } from './data';
 import './index.css';
-
-const renderContents = (data: ContentSectionProps[], type: string) => {
-  return data.map((item) => (
-    <ContentSection
-      {...item}
-      type={type}
-      key={type + item.sequence}
-    />
-  ));
-};
 
 const AthletsComponent: React.FC = () => {
   const { token: { colorBgContainer } } = theme.useToken();
@@ -31,7 +22,8 @@ const AthletsComponent: React.FC = () => {
           width={218}
           height={281}
         />}
-        content={renderContents(footballerData, 'football')}
+        type={FOOTBALL}
+        contentData={footballerData}
       />
       <GridArrange
         title="PLAYERS"
@@ -42,7 +34,8 @@ const AthletsComponent: React.FC = () => {
           width={302}
           height={250}
         />}
-        content={renderContents(basketballerData, 'basketball')}
+        type={BASKETBALL}
+        contentData={basketballerData}
       />
     </div>
   );

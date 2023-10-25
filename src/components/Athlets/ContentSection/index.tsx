@@ -6,6 +6,7 @@ const { Title, Paragraph } = Typography;
 
 const ContentSection = (props: ContentSectionProps) => {
   const { sequence, label, description, type } = props;
+  
   return (
     <Typography>
       <Title
@@ -31,7 +32,12 @@ const ContentSection = (props: ContentSectionProps) => {
         </span>
         {label}
       </Title>
-      <Paragraph style={{ color: sequence === '03' ? '#FFFFFF' : '#000000' }}>
+      <Paragraph
+        style={{
+          fontSize: '1.25rem',
+          color: sequence === '03' ? '#FFFFFF' : '#000000'
+        }}
+      >
         {description}
       </Paragraph>
     </Typography>

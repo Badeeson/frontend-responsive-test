@@ -2,16 +2,17 @@ export interface ContentSectionProps {
   sequence: string;
   label: string;
   description: string;
-  type?: string;
+  type: string;
 }
 
 export interface CarouselCustomProps {
-  data: Array<ContentSectionProps>;
   type: string;
+  children: React.JSX.Element[];
 }
 
 export interface GridArrangeProps {
   title: string;
   img: React.JSX.Element;
-  content: React.JSX.Element[];
+  type: string;
+  contentData: ContentSectionProps[];
 }
