@@ -10,8 +10,8 @@ export interface CarouselCustomProps {
   type: string;
 }
 
-export interface RenderContentProps {
+export interface GridArrangeProps {
   title: string;
   img: React.JSX.Element;
-  content: React.JSX.Element;
+  content: React.JSX.Element[];
 }
