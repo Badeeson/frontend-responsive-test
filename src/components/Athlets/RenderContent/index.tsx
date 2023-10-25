@@ -5,7 +5,7 @@ import { RenderContentProps } from '@/common/interfaces';
 const { Title } = Typography;
   
 const RenderContent = (props: RenderContentProps) => {
-  const { title, img, carousel } = props;
+  const { title, img, content } = props;
   return (
     <Row
       align="middle"
@@ -37,7 +37,7 @@ const RenderContent = (props: RenderContentProps) => {
         md={12}
         lg={12}
       >
-        {carousel}
+        {content}
       </Col>
     </Row>
   );

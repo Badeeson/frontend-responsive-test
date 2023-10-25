@@ -1,7 +1,7 @@
 export interface ContentSectionProps {
   sequence: string;
   label: string;
-  content: string;
+  description: string;
   type?: string;
 }
 
@@ -13,5 +13,5 @@ export interface CarouselCustomProps {
 export interface RenderContentProps {
   title: string;
   img: React.JSX.Element;
-  carousel: React.JSX.Element;
+  content: React.JSX.Element;
 }

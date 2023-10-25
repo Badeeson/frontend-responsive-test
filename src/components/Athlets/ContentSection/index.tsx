@@ -5,7 +5,7 @@ import { ContentSectionProps } from '@/common/interfaces';
 const { Title, Paragraph } = Typography;
 
 const ContentSection = (props: ContentSectionProps) => {
-  const { sequence, label, content, type } = props;
+  const { sequence, label, description, type } = props;
   return (
     <Typography>
       <Title
@@ -32,7 +32,7 @@ const ContentSection = (props: ContentSectionProps) => {
         {label}
       </Title>
       <Paragraph style={{ color: sequence === '03' ? '#FFFFFF' : '#000000' }}>
-        {content}
+        {description}
       </Paragraph>
     </Typography>
   );
