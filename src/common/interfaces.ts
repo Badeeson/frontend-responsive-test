@@ -12,7 +12,7 @@ export interface CarouselCustomProps {
 
 export interface GridArrangeProps {
   title: string;
-  img: React.JSX.Element;
+  img: string;
   type: string;
   contentData: ContentSectionProps[];
 }
