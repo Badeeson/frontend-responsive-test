@@ -19,6 +19,7 @@ const AthletsComponent: React.FC = () => {
         type={FOOTBALL}
         contentData={footballerData}
       />
+      <br />
       <GridArrange
         title="PLAYERS"
         img="basketballer"
