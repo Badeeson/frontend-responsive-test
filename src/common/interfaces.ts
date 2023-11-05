@@ -2,7 +2,7 @@ export interface ContentSectionProps {
   sequence: string;
   label: string;
   description: string;
-  type: string;
+  type?: string;
 }
 
 export interface CarouselCustomProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Row, Col, Grid, Typography } from 'antd';
-import { ContentSectionProps, GridArrangeProps } from '@/common/interfaces';
+import { GridArrangeProps } from '@/common/interfaces';
 import CarouselCustom from '../CarouselCustom';
 import ContentSection from '../ContentSection';
 
